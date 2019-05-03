@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ir.chamran.myexcel.MainActivity">
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:orderInCategory="200"
+        android:title="@string/str_search"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_import_excel"
+        android:orderInCategory="100"
+        android:title="@string/menu_import_excel"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_export_excel"
+        android:orderInCategory="100"
+        android:title="@string/menu_export_excel"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_about_me"
+        android:orderInCategory="100"
+        android:title="@string/menu_about_me"
+        app:showAsAction="never" />
+</menu>

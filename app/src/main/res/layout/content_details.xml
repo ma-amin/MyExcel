@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shopDetails"
+            type="ir.chamran.myexcel.model.ShopDetails" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="8dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crd_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp"
+                app:cardMaxElevation="2dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnt_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layoutDirection="ltr"
+                    android:padding="16dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/anim_state_details"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginStart="8dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <FrameLayout
+                        android:id="@+id/input_expireTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:background="?selectableItemBackground"
+                        app:layout_constraintBottom_toBottomOf="@+id/anim_state_details"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/anim_state_details"
+                        app:layout_constraintTop_toTopOf="@+id/anim_state_details">
+
+                        <TextView
+                            android:id="@+id/eti_expireTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_et_tk"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/str_data"
+                            android:padding="8dp"
+                            android:text="@{shopDetails.date}"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textColorHint="@color/colorDivider"
+                            android:textSize="@dimen/_12sdp" />
+                    </FrameLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_region"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/shape_et_tk"
+                        android:gravity="right|center"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/input_district"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/anim_state_details">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/eti_region"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right|center"
+                            android:hint="@string/str_region"
+                            android:importantForAutofill="noExcludeDescendants"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLength="48"
+                            android:maxLines="1"
+                            android:text="@{shopDetails.region}"
+                            android:textColorHint="@color/colorDivider"
+                            android:textSize="@dimen/_12sdp"
+                            tools:targetApi="o" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_district"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/shape_et_tk"
+                        android:gravity="right|center"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/input_address"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/input_region">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/eti_district"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right|center"
+                            android:hint="@string/str_district"
+                            android:importantForAutofill="noExcludeDescendants"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLength="48"
+                            android:maxLines="1"
+                            android:text="@{shopDetails.district}"
+                            android:textColorHint="@color/colorDivider"
+                            android:textSize="@dimen/_12sdp"
+                            tools:targetApi="o" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="132dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/shape_et_tk"
+                        android:gravity="right|center"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/input_type"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/input_district">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/eti_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:gravity="right"
+                            android:hint="@string/str_address"
+                            android:importantForAutofill="noExcludeDescendants"
+                            android:inputType="textMultiLine"
+                            android:maxLength="920"
+                            android:scrollbars="vertical"
+                            android:text="@{shopDetails.address}"
+                            android:textColorHint="@color/colorDivider"
+                            android:textSize="@dimen/_10sdp"
+                            tools:targetApi="o" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/shape_et_tk"
+                        android:gravity="right|center"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/input_address">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/eti_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right|center"
+                            android:hint="@string/str_type"
+                            android:importantForAutofill="noExcludeDescendants"
+                            android:inputType="text"
+                            android:nextFocusForward="@id/cnt_user"
+                            android:lines="1"
+                            android:maxLength="48"
+                            android:maxLines="1"
+                            android:text="@{shopDetails.type}"
+                            android:textColorHint="@color/colorDivider"
+                            android:textSize="@dimen/_12sdp"
+                            tools:targetApi="o" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crd_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp"
+                app:cardMaxElevation="2dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnt_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_fullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_et_tk"
+                        android:gravity="right|center"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/input_tel_1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/eti_fullName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right|center"
+                            android:hint="@string/str_fullName"
+                            android:importantForAutofill="noExcludeDescendants"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLength="48"
+                            android:maxLines="1"
+                            android:text="@{shopDetails.fullName}"
+                            android:textColorHint="@color/colorDivider"
+                            android:textSize="@dimen/_12sdp"
+                            tools:targetApi="o" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_tel_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/shape_et_tk"
+                        android:gravity="right|center"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/input_tel_2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/input_fullName">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/eti_tel_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right|center"
+                            android:hint="@string/hint_phone1"
+                            android:importantForAutofill="noExcludeDescendants"
+                            android:inputType="phone"
+                            android:lines="1"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:text="@{shopDetails.tel_1}"
+                            android:textColorHint="@color/colorDivider"
+                            android:textSize="@dimen/_12sdp"
+                            tools:targetApi="o" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_tel_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/shape_et_tk"
+                        android:gravity="right|center"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/input_tel_1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/eti_tel_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right|center"
+                            android:hint="@string/hint_phone2"
+                            android:importantForAutofill="noExcludeDescendants"
+                            android:inputType="phone"
+                            android:lines="1"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:text="@{shopDetails.tel_2}"
+                            android:textColorHint="@color/colorDivider"
+                            android:textSize="@dimen/_12sdp"
+                            tools:targetApi="o" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="city_icon">&#xf3c5;</string>
+    <string name="category_icon">&#xf0ca;</string>
+    <string name="gender_icon">&#xf224;</string>
+
+    <string name="phone_icon">&#xf095;</string>
+    <string name="mobile_icon">&#xf3cd;</string>
+    <string name="telegram_icon">&#xf2c6;</string>
+    <string name="fax_icon">&#xf1ac;</string>
+    <string name="mail_icon">&#xf0e0;</string>
+    <string name="web_icon">&#xf0ac;</string>
+
+    <string name="angle_left_icon">&#xf104;</string>
+    <string name="arrow_left_icon">&#xf060;</string>
+
+    <string name="circle_icon">&#xf111;</string>
+    <string name="dot_circle_icon">&#xf192;</string>
+    <string name="true_circle_icon">&#xf058;</string>
+    <string name="false_circle_icon">&#xf057;</string>
+
+    <string name="favorite_icon">&#xf004;</string>
+    <string name="bookmark_icon">&#xf02e;</string>
+    <string name="trash_alt_icon">&#xf2ed;</string>
+    <string name="share_icon">&#xf1e0;</string>
+    <string name="plus_icon">&#xf067;</string>
+    <string name="redo_icon">&#xf01e;</string>
+    <string name="close_icon">&#xf00d;</string>
+
+    <string name="fullscreen_icon">&#xf065;</string>
+    <string name="gift_icon">&#xf06b;</string>
+    <string name="file_icon">&#xf15c;</string>
+    <string name="graduation_cap_icon">&#xf19d;</string>
+    <string name="calendar_icon">&#xf073;</string>
+    <string name="search_icon">&#xf002;</string>
+    <string name="cart_arrow_icon">&#xf218;</string>
+    <string name="cmt_dollar_icon">&#xf651;</string>
+    <string name="store_icon">&#xf54e;</string>
+    <string name="user_icon">&#xf007;</string>
+</resources>

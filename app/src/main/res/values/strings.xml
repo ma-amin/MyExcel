@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">اکسل من</string>
+
+    <string name="menu_import_excel">ورودی از اکسل</string>
+    <string name="menu_export_excel">خروجی به اکسل</string>
+    <string name="menu_about_me">درباره…</string>
+
+    <string name="str_phone">تلفن</string>
+    <string name="str_mobile">موبایل</string>
+    <string name="str_telegram">تلگرام</string>
+    <string name="str_fax">نمابر</string>
+    <string name="str_email">ایمیل</string>
+    <string name="str_web">وب سایت</string>
+    <string name="str_type">نوع</string>
+    <string name="str_state">وضیعت</string>
+    <string name="str_name">نام</string>
+    <string name="str_fullName">نام و نام‌خانوادگی</string>
+    <string name="str_description">توضیحات</string>
+    <string name="str_Unknown">نا مشخص</string>
+    <string name="str_ok">تایید</string>
+    <string name="str_next">ادامه</string>
+    <string name="str_send">ارسال</string>
+    <string name="str_undo">بازگردانی</string>
+    <string name="str_close">بستن</string>
+    <string name="str_ignore">بی‌خیال</string>
+    <string name="str_now_not">فعلا نه</string>
+    <string name="str_try_again">تلاش مجدد</string>
+    <string name="str_download">دریافت</string>
+    <string name="str_installation">نصب</string>
+    <string name="str_search">جستوجو</string>
+    <string name="str_notice">توجه:</string>
+    <string name="str_city">شهر</string>
+    <string name="str_region">منطقه</string>
+    <string name="str_district">ناحیه</string>
+    <string name="str_address">آدرس</string>
+    <string name="str_title">عنوان</string>
+    <string name="str_subject">موضوع</string>
+    <string name="str_copied">کپی شد…</string>
+    <string name="str_buy">خرید</string>
+    <string name="str_number">عدد</string>
+    <string name="str_data">تاریخ</string>
+    <string name="str_specifications">مشخصات</string>
+    <string name="str_details">جزئیات</string>
+    <string name="str_messageText">متن پیام</string>
+    <string name="str_memoText">یادداشت</string>
+    <string name="str_row">ردیف</string>
+
+    <string name="hint_phone1">شماره تلفن اول</string>
+    <string name="hint_phone2">شماره تلفن دوم</string>
+    <string name="hint_save_post">ذخیره شود؟</string>
+    <string name="hint_edit_post">تمایل به ویرایش دارید؟</string>
+
+    <string name="toast_post_del">از لیست حذف شد!</string>
+    <string name="toast_close_main">برای خروج از برنامه یکبار دیگر کلید برگشت بفشارید.</string>
+    <string name="toast_main_empty">چیزی وجود ندارد</string>
+    <string name="toast_login_empty">فیلد(های) مورد نظر را تکمیل کنید.</string>
+    <string name="toast_login_tokenError">متاسفانه عملیات ثبت‌نام شما با موفقیت انجام نپذیرفت. لطفا مجددا تلاش بفرمایید.</string>
+    <string name="toast_excelError_import">فرمت اطلاعات وارد شده صحیح نمی‌باشد!</string>
+    <string name="toast_excelInfo_export">(حافظه داخلی)ذخیره شد</string>
+    <string name="toast_about_me">محمد اصغرپور
+        (دانشگاه چمران)
+        \n
+        09371200824 mammad.ab@gmail.com
+    </string>
+</resources>
